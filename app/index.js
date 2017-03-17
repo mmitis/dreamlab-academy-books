@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoApp from './components/TodoApp';
+import BookSearchApp from './components/BookSearchApp';
 
-ReactDOM.render(<TodoApp />, document.getElementById('root'));
+ReactDOM.render(<BookSearchApp />, document.getElementById('root'));
