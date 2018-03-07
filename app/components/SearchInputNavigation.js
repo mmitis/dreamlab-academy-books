@@ -1,11 +1,12 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-export class SearchInputNavigation extends Component {
+export class SearchInputNavigation extends React.Component {
     constructor(props) {
         super(props);
         this.onChange = this.onChange.bind(this);
-        this.delayedCallback = _.debounce((event)=> {
+        this.delayedCallback = _.debounce(()=> {
             //emit event to parent new value
             this.props.onPhraseChanged(this.inputRef.value);
         }, 300);

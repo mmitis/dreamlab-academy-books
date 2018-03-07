@@ -1,13 +1,14 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ResultSearchItem from './pureComponents/ResultSearchItem';
 
-export class ResultSearchList extends Component {
+export class ResultSearchList extends React.Component {
     constructor(props) {
         super(props);
     }
 
     handleNoEntries(nodes, items) {
-        if (items.length == 0) {
+        if (items.length === 0) {
             return (
                 <div className="list-group-item ">
                     <div className="text-center w-100">No books found.</div>
@@ -41,6 +42,7 @@ export class ResultSearchList extends Component {
 }
 
 const {arrayOf, shape, string} = PropTypes;
+
 // how to define typed proptypes
 ResultSearchList.propTypes = {
     items: arrayOf(shape({

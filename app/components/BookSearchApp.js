@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import ResultSearchList from './ResultSearchList';
@@ -7,7 +7,7 @@ import BookAPIFetcher from './../services/BookAPIFetcher';
 import SearchLoadingBar from './pureComponents/SearchLoadingBar';
 import BookDetails from './pureComponents/BookDetails';
 
-export class BookSearchApp extends Component {
+export class BookSearchApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
